@@ -5,7 +5,11 @@ const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/
 
 // Function to call Gemini API directly
 async function callGeminiAPI(prompt) {
-    const apiKey = 'AIzaSyAM4Mp3_wm_xNAq-UddaOPaUKSX-nO9CO4';
+    const apiKey = process.env.GEMINI_API_KEY;
+    
+    if (!apiKey) {
+        throw new Error('GEMINI_API_KEY environment variable is not set');
+    }
     const response = await fetch(`${GEMINI_API_URL}?key=${apiKey}`, {
         method: 'POST',
         headers: {

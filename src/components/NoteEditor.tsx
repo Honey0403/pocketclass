@@ -38,19 +38,19 @@ export const NoteEditor: React.FC<NoteEditorProps> = ({
           <span className="text-xs text-slate-400">Live</span>
         </div>
       </div>
-      
+
       {/* Modern Editor Toolbar */}
       <EditorToolbar editor={editor} />
-      
+
       {/* Editor Content Area */}
       <div className="relative mb-8">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         <div className="relative border border-slate-600/50 rounded-2xl p-6 min-h-[350px] bg-slate-900/50 backdrop-blur-sm focus-within:border-purple-500/50 focus-within:shadow-lg focus-within:shadow-purple-500/10 transition-all duration-300">
           {isClient ? (
             <>
-              <EditorContent 
-                editor={editor} 
-                className="prose prose-invert prose-slate max-w-none text-slate-200 prose-headings:text-white prose-strong:text-white prose-em:text-slate-300 prose-code:text-purple-300 prose-code:bg-slate-800 prose-pre:bg-slate-800 prose-blockquote:border-purple-500 prose-blockquote:text-slate-300" 
+              <EditorContent
+                editor={editor}
+                className="prose prose-invert prose-slate max-w-none text-white prose-headings:text-white prose-strong:text-white prose-em:text-white prose-code:text-white prose-code:bg-slate-800 prose-pre:bg-slate-800 prose-blockquote:border-purple-500 prose-blockquote:text-white"
               />
               {!editor?.getHTML() && (
                 <div className="absolute inset-6 flex items-center justify-center pointer-events-none">
@@ -124,7 +124,7 @@ export const NoteEditor: React.FC<NoteEditorProps> = ({
           </>
         </ActionButton>
       </div>
-      
+
       {/* Subtle bottom accent */}
       <div className="mt-6 h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent"></div>
     </div>

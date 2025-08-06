@@ -27,7 +27,7 @@ body {
 
 /* Tiptap Editor Styling */
 .ProseMirror {
-  color: #374151 !important; /* Dark gray text */
+  color: #ffffff !important; /* White text */
   font-size: 16px;
   line-height: 1.6;
   outline: none;
@@ -46,7 +46,7 @@ body {
 
 .ProseMirror p {
   margin: 0.5em 0;
-  color: #374151 !important;
+  color: #ffffff !important;
 }
 
 .ProseMirror h1,
